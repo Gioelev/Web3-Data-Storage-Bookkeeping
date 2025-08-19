@@ -1,8 +1,6 @@
-# How to use this template
-Template for repositories for v6 allocators. Please ensure you fill out the Readme file with correct information, within 2 weeks of being accepted as an allocator. Remove the this top header to start with your allocator name
 
 # Allocator Bookeeping repository for <Web3-Data-Storage>
-_Replace <Allocator Name> with your Allocator's name_
+Web3-Data-Storage
 
 ## Allocator JSON Link
 _put here a link to your allocator json from https://github.com/filecoin-project/Allocator-Registry/tree/main/Allocators_ recC3QfThf5mSgnB9
