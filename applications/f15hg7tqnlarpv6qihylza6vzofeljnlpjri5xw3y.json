@@ -1,0 +1,66 @@
+{
+  "Version": "1.3",
+  "ID": "f15hg7tqnlarpv6qihylza6vzofeljnlpjri5xw3y",
+  "Issue Number": "1",
+  "Client": {
+    "Name": "UCSC,ParaCrawl,NREL,NOAA,NASA,Umbra,Biomedical Informatics Lab,Finnish Meteorological Institute,U.S. Environmental Protection Agency,Natural Resources Canada",
+    "Region": "American Samoa",
+    "Industry": "Life Science / Healthcare",
+    "Website": "https://data.humancellatlas.org/",
+    "Social Media": "https://data.humancellatlas.org/",
+    "Social Media Type": "Other",
+    "Role": "Data Preparer"
+  },
+  "Project": {
+    "Brief history of your project and organization": "1. Human Cell Atlas: A global scientific collaboration creating comprehensive reference maps of all human body cells to understand health and diagnose, monitor, and treat diseases.\nhttps://registry.opendata.aws/humancellatlas/\n\n2. ParaCrawl: Large parallel corpora for all official EU languages, generated from web crawling, cleaned, and ready for training CEF.AT and DG Translation.\nhttps://registry.opendata.aws/paracrawl/\n\n3. DOE's WPTO US Wave Dataset: High-resolution, publicly available wave hindcast dataset covering the U.S. Exclusive Economic Zone, part of the DOE's Open Energy Data Initiative.\nhttps://registry.opendata.aws/wpto-pds-us-wave/\n\n4. NOAA HYSPLIT-Compatible Meteorological Data: Archives of NCEP meteorological datasets for HYSPLIT model simulations, used for air parcel trajectories, pollutant dispersion, and back trajectory analysis.\nhttps://registry.opendata.aws/noaa-arl-hysplit/\n\n5. NASA NEX-GDDP-CMIP6: Global, high-resolution, bias-corrected climate projections from CMIP6 GCM runs for evaluating climate change impacts under SSP scenarios.\nhttps://registry.opendata.aws/nex-gddp-cmip6/\n\n6. Umbra SAR Open Data: Highest-resolution (16-cm) Synthetic Aperture Radar imagery from space, capable of capturing images through clouds, smoke, and at night for change monitoring.\nhttps://registry.opendata.aws/umbra-open-data/\n\n7. MetaGraph Sequence Indexes: Full-text searchable indexes of raw sequencing data from ENA, SRA, and DDBJ, usable with the MetaGraph framework for cloud or local sequence search.\nhttps://aws.amazon.com/marketplace/pp/prodview-ruhw4yu2xl64a\n\n8. HIRLAM Weather Model: Operational synoptic and mesoscale weather prediction model managed by the Finnish Meteorological Institute.\nhttps://registry.opendata.aws/hirlam/\n\n9. OAQPS 2022 Modeling Platform: Dataset supporting EPA's regulatory actions and technical analyses for air quality planning and standards in 2022.\nhttps://registry.opendata.aws/epa-2022-modeling-platform/\n\n10. CanElevation LiDAR Point Clouds: Open-licensed LiDAR point cloud data from Canadian airborne projects, distributed in .LAZ/COPC format under NAD83(CSRS) and CGVD2013.\nhttps://aws.amazon.com/marketplace/pp/prodview-nhx7w6nwh4pze\n\n11. NOAA CORA Dataset: Coastal ocean reanalysis for Gulf, East Coast, and Caribbean using ADCIRC and SWAN models with hourly water level data assimilation for improved accuracy.\nhttps://registry.opendata.aws/noaa-nos-cora/",
+    "Is this project associated with other projects/ecosystem stakeholders?": "No",
+    "Describe the data being stored onto Filecoin": "1. Human Cell Atlas: A global scientific collaboration creating comprehensive reference maps of all human body cells to understand health and diagnose, monitor, and treat diseases.\nhttps://registry.opendata.aws/humancellatlas/    321.7 TiB\n\n2. ParaCrawl: Large parallel corpora for all official EU languages, generated from web crawling, cleaned, and ready for training CEF.AT and DG Translation.\nhttps://registry.opendata.aws/paracrawl/       97.83 TB\n\n3. DOE's WPTO US Wave Dataset: High-resolution, publicly available wave hindcast dataset covering the U.S. Exclusive Economic Zone, part of the DOE's Open Energy Data Initiative.\nhttps://registry.opendata.aws/wpto-pds-us-wave/  90.25 TB\n\n4. NOAA HYSPLIT-Compatible Meteorological Data: Archives of NCEP meteorological datasets for HYSPLIT model simulations, used for air parcel trajectories, pollutant dispersion, and back trajectory analysis.\nhttps://registry.opendata.aws/noaa-arl-hysplit/  81.10 TB\n\n5. NASA NEX-GDDP-CMIP6: Global, high-resolution, bias-corrected climate projections from CMIP6 GCM runs for evaluating climate change impacts under SSP scenarios.\nhttps://registry.opendata.aws/nex-gddp-cmip6/   66.01 TB\n\n6. Umbra SAR Open Data: Highest-resolution (16-cm) Synthetic Aperture Radar imagery from space, capable of capturing images through clouds, smoke, and at night for change monitoring.\nhttps://registry.opendata.aws/umbra-open-data/  60.18 TB\n\n7. MetaGraph Sequence Indexes: Full-text searchable indexes of raw sequencing data from ENA, SRA, and DDBJ, usable with the MetaGraph framework for cloud or local sequence search.\nhttps://aws.amazon.com/marketplace/pp/prodview-ruhw4yu2xl64a  54.73 TB\n\n8. HIRLAM Weather Model: Operational synoptic and mesoscale weather prediction model managed by the Finnish Meteorological Institute.\nhttps://registry.opendata.aws/hirlam/  52.58 TB\n\n9. OAQPS 2022 Modeling Platform: Dataset supporting EPA's regulatory actions and technical analyses for air quality planning and standards in 2022.\nhttps://registry.opendata.aws/epa-2022-modeling-platform/  51.75 TB\n\n10. CanElevation LiDAR Point Clouds: Open-licensed LiDAR point cloud data from Canadian airborne projects, distributed in .LAZ/COPC format under NAD83(CSRS) and CGVD2013.\nhttps://aws.amazon.com/marketplace/pp/prodview-nhx7w6nwh4pze  44.82 TB\n\n11. NOAA CORA Dataset: Coastal ocean reanalysis for Gulf, East Coast, and Caribbean using ADCIRC and SWAN models with hourly water level data assimilation for improved accuracy.\nhttps://registry.opendata.aws/noaa-nos-cora/  44.60 TB",
+    "Where was the data currently stored in this dataset sourced from": "AWS Cloud",
+    "How do you plan to prepare the dataset": "First, I will use AWS's CLI, via a dedicated network, to download all the metadata. Second, I will use the go-car tool to package the metadata files into CAR files. Third, I will distribute the CAR files to the SP via hard drives or over the network.",
+    "Please share a sample of the data (a link to a file, an image, a table, etc., are good ways to do this.)": "Human Cell Atlas:\naws s3 ls --no-sign-request s3://humancellatlas/\nhttps://registry.opendata.aws/humancellatlas/\n\nParaCrawl:\naws s3 ls --no-sign-request s3://web-language-models/\nhttps://registry.opendata.aws/paracrawl/\n\nDOE's WPTO US Wave Dataset:\naws s3 ls --no-sign-request s3://wpto-pds-us-wave/\nhttps://registry.opendata.aws/wpto-pds-us-wave/\n\nNOAA HYSPLIT-Compatible Meteorological Data:\naws s3 ls --no-sign-request s3://noaa-oar-arl-hysplit-pds/\nhttps://registry.opendata.aws/noaa-arl-hysplit/\n\nNASA NEX-GDDP-CMIP6:\naws s3 ls --no-sign-request s3://nex-gddp-cmip6/\nhttps://registry.opendata.aws/nex-gddp-cmip6/\n\nUmbra SAR Open Data:\naws s3 ls --no-sign-request s3://umbra-open-data-catalog/\nhttps://registry.opendata.aws/umbra-open-data/\n\nMetaGraph Sequence Indexes:\naws s3 ls --no-sign-request s3://metagraph/\nhttps://registry.opendata.aws/metagraph/\n\nHIRLAM Weather Model:\naws s3 ls --no-sign-request s3://fmi-opendata-rcrhirlam-surface-grib/\nhttps://registry.opendata.aws/hirlam/\n\nOAQPS 2022 Modeling Platform:\naws s3 ls --no-sign-request s3://epa-2022-modeling-platform/\nhttps://registry.opendata.aws/epa-2022-modeling-platform/\n\nCanElevation LiDAR Point Clouds:\naws s3 ls --no-sign-request s3://canelevation-lidar-point-clouds/\nhttps://registry.opendata.aws/canelevation/\n\nNOAA CORA Dataset:\naws s3 ls --no-sign-request s3://noaa-nos-cora-pds/\nhttps://registry.opendata.aws/noaa-nos-cora/",
+    "Confirm that this is a public dataset that can be retrieved by anyone on the network (i.e., no specific permissions or access rights are required to view the data)": "[x] I confirm",
+    "What is the expected retrieval frequency for this data": "Yearly",
+    "For how long do you plan to keep this dataset stored on Filecoin": "1 to 1.5 years",
+    "In which geographies do you plan on making storage deals": "Asia other than Greater China, Greater China",
+    "How will you be distributing your data to storage providers": "Shipping hard drives",
+    "Please list the provider IDs and location of the storage providers you will be working with. Note that it is a requirement to list a minimum of 5 unique provider IDs, and that your client address will be verified against this list in the future": "f03645883 Seoul\nf03645884 Seoul\nf03644142 Hong Kong\nf03645007 Hong Kong\nf03645885 Tokyo\nf03646493 Tokyo\nf03663680 Hong Kong\nf03663684 Hong Kong",
+    "Can you confirm that you will follow the Fil+ guideline (Data owner should engage at least 4 SPs and no single SP ID should receive >30% of a client's allocated DataCap)": "Yes"
+  },
+  "Datacap": {
+    "Type": "ldn-v3",
+    "Data Type": "Slingshot",
+    "Total Requested Amount": "7.5PiB",
+    "Single Size Dataset": "970TiB",
+    "Replicas": 8,
+    "Weekly Allocation": "1PiB"
+  },
+  "Lifecycle": {
+    "State": "Granted",
+    "Validated At": "2025-10-11 01:59:08.074176572 UTC",
+    "Validated By": "Gioelev",
+    "Active": true,
+    "Updated At": "2025-10-11 01:59:08.074165410 UTC",
+    "Active Request ID": "b6559ff7-ba54-4834-ab55-39e4022e09fd",
+    "On Chain Address": "f15hg7tqnlarpv6qihylza6vzofeljnlpjri5xw3y",
+    "Multisig Address": "false",
+    "edited": false
+  },
+  "Allocation Requests": [
+    {
+      "ID": "b6559ff7-ba54-4834-ab55-39e4022e09fd",
+      "Request Type": "First",
+      "Created At": "2025-10-11 01:41:56.172660666 UTC",
+      "Updated At": "2025-10-11 01:41:56.172661758 UTC",
+      "Active": false,
+      "Allocation Amount": "281474976710656 B",
+      "Signers": [
+        {
+          "Github Username": "Gioelev",
+          "Signing Address": "f1m7v44vbgyqpybxh4gy5d5szyllih2rwg3s5n6hi",
+          "Created At": "2025-10-11 01:59:06.018000000 UTC",
+          "Message CID": "bafy2bzacec73qulcbk2qxcwtdimlmnohklkparsojyk7gourosbwuvrj7r6ow"
+        }
+      ]
+    }
+  ]
+}
