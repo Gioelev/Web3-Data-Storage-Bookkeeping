@@ -35,11 +35,11 @@
     "Weekly Allocation": "1PiB"
   },
   "Lifecycle": {
-    "State": "ReadyToSign",
-    "Validated At": "2025-10-13 03:52:03.475145179 UTC",
+    "State": "Granted",
+    "Validated At": "2025-10-13 03:54:07.575882627 UTC",
     "Validated By": "Gioelev",
     "Active": true,
-    "Updated At": "2025-10-13 03:52:03.475151796 UTC",
+    "Updated At": "2025-10-13 03:54:07.575878648 UTC",
     "Active Request ID": "cd7dffbd-81a3-4ec2-bdac-2cad7b4e046c",
     "On Chain Address": "f15hg7tqnlarpv6qihylza6vzofeljnlpjri5xw3y",
     "Multisig Address": "false",
@@ -67,9 +67,16 @@
       "Request Type": "Refill",
       "Created At": "2025-10-13 03:52:03.475158445 UTC",
       "Updated At": "2025-10-13 03:52:03.475159636 UTC",
-      "Active": true,
+      "Active": false,
       "Allocation Amount": "562949953421312B",
-      "Signers": []
+      "Signers": [
+        {
+          "Github Username": "Gioelev",
+          "Signing Address": "f1m7v44vbgyqpybxh4gy5d5szyllih2rwg3s5n6hi",
+          "Created At": "2025-10-13 03:54:05.461000000 UTC",
+          "Message CID": "bafy2bzacebv7rw4e6tza5chjgno43rygkwdzezepc2dhqur7micepgzzu3aig"
+        }
+      ]
     }
   ]
 }
